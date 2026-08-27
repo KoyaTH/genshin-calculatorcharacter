@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genshin UP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <h1>Planeje sua pr&oacute;xima ascens&atilde;o.</h1>
+        <p class="sub">Escolha seus personagens, informe os n&iacute;veis desejados e compare os materiais necess&aacute;rios com o seu invent&aacute;rio.</p>
+      </header>
+      <section><h2 id="charactersTitle">Personagens <span id="charCount">carregando&hellip;</span></h2><label class="sr-only" for="search">Buscar personagem</label><input type="search" id="search" placeholder="Buscar personagem&hellip;" aria-label="Buscar personagem" name="character-search" /><div id="charGrid" class="grid"><p class="note">Buscando lista de personagens&hellip;</p></div></section>
+      <section><h2 id="selectedTitle">Configura&ccedil;&atilde;o <span id="selCount">0 selecionados</span></h2><div id="selectedList" class="list"></div><datalist id="weaponNames"></datalist></section>
+      <section class="settings"><button id="settingsToggle" type="button" class="settings-toggle">Configura&ccedil;&otilde;es</button><div id="settingsPanel" class="settings-panel" hidden><div class="settings-row"><button id="resetAllBtn" type="button">Resetar tudo</button><button id="resetMaterialsBtn" type="button">Resetar materiais</button><button id="clearCacheBtn" type="button" class="danger">Limpar dados deste dispositivo</button></div><div class="settings-row"><button id="clearCharactersBtn" type="button">Remover todos os personagens</button><button id="selectAllBtn" type="button">Selecionar todos</button></div><div class="settings-row language-row"><span id="languageLabel">Idioma</span><div id="languageSwitch" class="language-switch" role="group" aria-label="Idioma"><button type="button" data-language="pt">Portugu&ecirc;s</button><button type="button" data-language="en">English</button></div></div><div class="settings-row"><button id="exportBtn" type="button">Exportar dados</button><button id="importBtn" type="button">Importar dados</button><input id="importFile" type="file" accept="application/json" hidden /></div><p id="settingsNote" class="settings-note">Nomes de armas e materiais v&ecirc;m da API p&uacute;blica.</p></div></section>
+      <section id="completedSection" hidden><h2>Personagens completos <span id="completeCount">0 completos</span></h2><p class="sub">Estes personagens j&aacute; atingiram sua meta e n&atilde;o entram no c&aacute;lculo.</p><div id="completedList" class="completed-list"></div></section>
+      <section class="actions"><button id="calcBtn" disabled>Calcular materiais necess&aacute;rios</button></section>
+      <section id="resultSection" hidden><h2>Sua lista de coleta</h2><p class="sub">Informe o que j&aacute; possui. O saldo restante &eacute; atualizado e salvo automaticamente.</p><div id="resultBox"></div></section>
+    </main><script type="module" src="scripts/app.js"></script>
+  </body>
+</html>

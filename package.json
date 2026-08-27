@@ -1,0 +1,14 @@
+{
+  "name": "genshin-calculatorcharacter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "scrape": "node tools/scrape-game8-items.js",
+    "test:scraper": "node tools/test-game8-items.js",
+    "serve": "node tools/local-server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "node-fetch": "^2.6.11"
+  }
+}
